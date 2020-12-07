@@ -3,13 +3,13 @@
 REGION=eu-west-1
 AWS_ACCOUNT_ID=349224821989
 
-DOCKER_APP_REPOSITORY=SychevAndrey-cart-api
+DOCKER_APP_REPOSITORY=sychevandrey-cart-api
 AWS_DOCKER_REGISTRY_URL=$AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
 DOCKER_TIME_TAG="$(date +%s)"
 DOCKER_LATEST_TAG=latest
 
 # Logout from Docker
-docker logout
+docker logout $AWS_DOCKER_REGISTRY_URL
 # Login in AWS container registry with your AWS credentials
 aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $AWS_DOCKER_REGISTRY_URL
 # Build Docker image
