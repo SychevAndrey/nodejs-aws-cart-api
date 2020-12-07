@@ -3,7 +3,7 @@
 #ENV=development
 ENV=develop
 
-REGION=eu-central-1
+REGION=eu-west-1
 AWS_ACCOUNT_ID=724443507988
 #PROFILE=default
 PROFILE=personalAccount

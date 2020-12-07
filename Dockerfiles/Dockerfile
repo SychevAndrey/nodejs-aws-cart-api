@@ -1,5 +1,5 @@
 # Base
-FROM node:12
+FROM node:12.20.0-alpine3.12
 
 WORKDIR /app
 
